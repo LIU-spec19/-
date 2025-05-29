@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敦煌文创商城 - 探索敦煌文化之美</title>
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+</head>
+<body>
+    <!-- 广告弹窗 -->
+    <div class="ad-popup">
+        <div class="ad-container">
+            <button class="close-ad">&times;</button>
+            <div class="ad-grid">
+                <div class="ad-item">
+                    <img src="./images/products/gg1.png" alt="广告1">
+                </div>
+                <div class="ad-item">
+                    <img src="./images/products/gg2.png" alt="广告2">
+                </div>
+                <div class="ad-item">
+                    <img src="./images/products/gg3.png" alt="广告3">
+                </div>
+                <div class="ad-item">
+                    <img src="./images/products/gg4.png" alt="广告4">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 加载动画 -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <i class="fa fa-shopping-cart loader-icon"></i>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">敦煌文创</a>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索商品...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="#" class="active">商城</a>
+                <a href="login.html">登录</a>
+                <a href="#" class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 轮播图部分 -->
+    <div class="swiper banner-swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/banner1.png" alt="敦煌文创">
+                <div class="banner-content">
+                    <h2>敦煌文创</h2>
+                    <p>传承千年文化，品味艺术之美</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images\products\mofang.png" alt="限定商品">
+                <div class="banner-content">
+                    <h2>限定商品</h2>
+                    <p>精选敦煌元素，打造独特文创</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <img src="images\banner3.png" alt="新品上市">
+                <div class="banner-content">
+                    <h2>新品上市</h2>
+                    <p>探索更多敦煌文创产品</p>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+
+    <main>
+        <aside class="filters">
+            <h3>商品分类</h3>
+            <ul class="category-list">
+                <li><a href="#" class="active">全部商品</a></li>
+                <li><a href="#">文创文具</a></li>
+                <li><a href="#">家居装饰</a></li>
+                <li><a href="#">服饰配饰</a></li>
+                <li><a href="#">艺术复制品</a></li>
+            </ul>
+            
+            <h3>价格区间</h3>
+            <div class="price-range">
+                <div class="price-slider-container">
+                    <input type="range" id="priceSlider" min="0" max="300" value="300" step="10">
+                    <div class="price-labels">
+                        <span>¥0</span>
+                        <span id="currentPrice">¥300</span>
+                    </div>
+                </div>
+                <div class="price-inputs">
+                    <input type="number" id="minPrice" placeholder="最低价" min="0" max="300" value="0">
+                    <span>-</span>
+                    <input type="number" id="maxPrice" placeholder="最高价" min="0" max="300" value="300">
+                </div>
+            </div>
+
+            <h3>商品标签</h3>
+            <div class="tags">
+                <span class="tag">新品</span>
+                <span class="tag">热销</span>
+                <span class="tag">限定</span>
+                <span class="tag">折扣</span>
+            </div>
+        </aside>
+
+        <section class="products">
+            <div class="products-header">
+                <h2>精选商品</h2>
+                <div class="sort-options">
+                    <select>
+                        <option value="default">默认排序</option>
+                        <option value="price-asc">价格从低到高</option>
+                        <option value="price-desc">价格从高到低</option>
+                        <option value="newest">最新上架</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="products-grid">
+                <!-- 商品卡片将通过JavaScript动态生成 -->
+            </div>
+            <div class="product-hover-details">
+                <div class="product-description">${product.description}</div>
+                <div class="product-specs">
+                    <p><i class="fas fa-tags"></i> 分类: ${product.category}</p>
+                    <p><i class="fas fa-box-open"></i> 库存: ${product.stock}件</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 商品详情弹窗 -->
+    <div class="product-modal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <div class="modal-body">
+                <!-- 商品详情将通过JavaScript动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <div class="cart-sidebar">
+        <div class="cart-header">
+            <h3>购物车</h3>
+            <button class="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items">
+            <!-- 购物车商品将通过JavaScript动态生成 -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>总计：</span>
+                <span class="total-price">0.00</span>
+            </div>
+            <button class="checkout-btn">结算</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>关于我们</h4>
+                <p>敦煌文创致力于传播敦煌文化，为您带来独特的文创产品。</p>
+            </div>
+            <div class="footer-section">
+                <h4>联系方式</h4>
+                <p>电话：123-456-7890</p>
+                <p>邮箱：contact@dunhuang.com</p>
+            </div>
+            <div class="footer-section">
+                <h4>关注我们</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy;版权所有©23人工智能D班第八组</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/shop.js"></script>
+</body>
+</html> 

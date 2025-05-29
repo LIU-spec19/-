@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="./css/allstyle.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/ai-assistant.css">
+    <script src="./js/user.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/ai-assistant.js"></script>
+    <script src="./js/nav.js"></script>
+    
+</head>
+
+<body data-page="index">
+    <!-- 页面加载动画 -->
+    <div class="page-loader">
+        <div class="loader-content">
+            <img src="./images/logo.png" alt="敦煌文化" class="loader-logo">
+            <div class="loader-spinner"></div>
+            <p>正在加载敦煌文化...</p>
+        </div>
+    </div>
+
+    <!-- 导航栏 -->
+    <header>
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+        <div class="heard">
+            <div class="heard_left">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">网站首页</a>
+                        </li>
+                        <li>
+                            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+                        </li>
+                        <li>
+                            <a href="./history.html">历史简介</a>
+                        </li>
+                        <li class="rop-down-menu-box">
+                            <div class="drop-down-menu">
+                                <a href="#">壁画精选</a>
+                                <div class="drop-box">
+                                    <a href="./music.html">乐器主题</a>
+                                    <a href="./dance.html">舞蹈主题</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Scripture.html">敦煌手势</a>
+                        </li>
+                        <li>
+                            <a href="./creation.html">寻梦敦煌</a>
+                        </li>
+                        <li>
+                            <a href="./shop.html">周边商城</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heard_right">
+                <input type="text" id="simpleSearch" placeholder="搜索页面..." list="pageSuggestions">
+                <datalist id="pageSuggestions">
+                    <option value="敦煌学的由来">
+                    <option value="历史简介">
+                    <option value="音乐主题">
+                    <option value="舞蹈主题">
+                    <option value="敦煌手势">
+                    <option value="寻梦敦煌">
+                </datalist>
+                <div class="user-auth">
+                    <a href="login.html" id="loginLink">登录</a> 
+                    <span id="userGreeting" style="display:none;">
+                        用户 <span id="usernameDisplay"></span>
+                        <a href="javascript:void(0)" id="logoutLink">退出</a>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <!-- 中间内容区域 -->
+    <div id="banner" class="animate-banner">
+        <div class="little_box">
+            <div class="banner_text animate-text">
+                <h1>敦煌文化 | Dunhuang Culture Introduction​</h1>
+                <p>
+                    敦煌是丝绸之路上璀璨的艺术宝库，被誉为"东方卢浮宫"。现存735个洞窟，跨越4至14世纪，保存彩塑3000余尊、壁画4.5万平方米及唐宋木构建筑5座。1944年成立国立敦煌艺术研究所，后发展为敦煌研究院，开创了中国最系统、持久的文物保护与研究体系，成为世界敦煌学核心。
+                </p>
+                <p>​Dunhuang​​, a gem on the Silk Road, is hailed as the "Louvre of the East." Its 735 caves, spanning the 4th–14th centuries, preserve 3,000 sculptures, 45,000㎡ of murals, and 5 Tang-Song wooden temples. Founded in 1944, the Dunhuang Academy established China's most systematic heritage conservation system and remains a global hub for Dunhuang studies. 
+                </p>
+                <div class="index_more animate-button">
+                    <a href="./DunhuangStudies.html">了解更多</a>
+                </div>
+            </div>
+            <div class="wudao animate-image">
+                <img src="./images/wudao.png" alt="">
+                <img src="./images/lu.png" alt="">
+                <img src="./images/yunduo.png" alt="">
+            </div>
+        </div>
+    </div>
+    <style>
+        .animate-banner {
+            opacity: 0;
+            animation: fadeIn 1.2s ease-in-out forwards;
+        }
+        .animate-text {
+            transform: translateY(30px);
+            opacity: 0;
+            animation: slideUp 1s ease-out 0.3s forwards;
+        }
+        .animate-image {
+            transform: translateX(30px);
+            opacity: 0;
+            animation: slideLeft 1s ease-out 0.6s forwards;
+        }
+        .animate-button {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-in-out 1s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        @keyframes slideLeft {
+            from { transform: translateX(30px); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+    <!-- 壁画精选 -->
+    <div id="Mural_Special_Topic">
+        <div class="Mural_Special_Topic_box">
+            <div class="h2">
+                <h2>壁画精选</h2>
+                <p>Lots of murals, enjoy it to your heart's content</p>
+            </div>
+            <ul class="Mural_Special_list">
+                <li>
+                    <img src="./images/wudao.png" alt="">
+                    <h3>
+                        乐器
+                    </h3>
+                    <p class="Mural_Special_list_txt">
+                        敦煌石窟的乐器图像以佛教音乐为主题。探寻敦煌壁画中的乐器描绘，不仅能领略古代艺术家的精湛技艺与独特表现手法，作为参考，更能深切感受先人对音乐与信仰的虔诚之心。
+                    </p>
+                    <p class="Mural_Special_list_number">
+                        馆藏 <span>6</span> 资源
+                    </p>
+                </li>
+                <li>
+                    <img src="./images/footer_left.png" alt="" height="250px">
+                    <h3>
+                        舞蹈
+                    </h3>
+                    <p class="Mural_Special_list_txt">
+                        敦煌石窟展现了千姿百态、灵动飘逸的舞蹈艺术，如：在云端翱翔、衣袂翩跹的飞天舞者，在净土经变画中，占据核心位置生动演绎"乐舞"的伎乐菩萨，充满世俗情趣的民间宴乐场景以及兼具庄严与柔美的金刚力士形象等。
+                    </p>
+                    <p class="Mural_Special_list_number">
+                        馆藏 <span>6</span> 资源
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 敦煌手势 -->
+    <div id="literature">
+        <div class="h2">
+            <h2>敦煌手势</h2>
+            <p>Buddha's Mudra - Dunhuang's Minimalist Aesthetics</p>
+        </div>
+        <div id="literature_box">
+            <ul class="Co_create_works_box">
+                <li>
+                    <div class="works_box_img" data-bg-image="images/jing8.jpg">
+                    </div>
+                    <h3>
+                        化须弥山手
+                    </h3>
+                    <p class="works_box_txt">
+                        象征佛陀说法时如须弥山般巍峨庄严的手印，常见于说法图中。掌心向外，五指自然舒展，表现佛法的广大无边。敦煌壁画中这一手势多用于表现释迦牟尼佛在灵鹫山说法的场景。
+                    </p>
+                </li>
+                <li>
+                    <div class="works_box_img" data-bg-image="images/jing9.jpg">
+                    </div>
+                    <h3>
+                        持莲手
+                    </h3>
+                    <p class="works_box_txt">
+                        表现菩萨手持莲花的优雅姿态，象征清净无染。敦煌壁画中观音菩萨常作此手印，拇指与食指轻拈莲茎，其余三指自然弯曲，体现菩萨的慈悲与智慧。
+                    </p>
+                </li>
+                <li>
+                    <div class="works_box_img" data-bg-image="images/jing10.jpg">
+                    </div>
+                    <h3>
+                        持柳枝手
+                    </h3>
+                    <p class="works_box_txt">
+                        观音菩萨特有的手印之一，象征菩萨以杨柳枝洒甘露普度众生。敦煌壁画中这一手势常见于水月观音形象，表现观音的慈悲救度之德。
+                    </p>
+                </li>
+                <li>
+                    <div class="works_box_img" data-bg-image="images/jing11.jpg">
+                    </div>
+                    <h3>
+                        护鸽手
+                    </h3>
+                    <p class="works_box_txt">
+                        表现佛陀救护众生的慈悲手印，手掌向下如庇护状。敦煌壁画中这一手势常见于表现佛陀本生故事，如舍身饲虎、割肉贸鸽等场景，象征佛法的保护力量。
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- 寻梦敦煌 -->
+    <div id="Co_create_works">
+        <div class="h2">
+            <h2>寻梦敦煌</h2>
+            <p>In Dunhuang, everything is as colorful as spring flowers</p>
+        </div>
+        <ul class="Co_create_works_box">
+            <li>
+                <div class="works_box_img">
+                </div>
+                <h3>
+                    敦煌纹样
+                </h3>
+                <p class="works_box_txt">
+                    Inspired by the Tang Dynasty Cave 220 murals at Mogao Grottoes, this digital artwork recreates a grand musical ensemble and lantern-bearing bodhisattvas.
+                </p>
+            </li>
+            <li>
+                <div class="works_box_img">
+                </div>
+                <h3>
+                    敦煌飞天
+                </h3>
+                <p class="works_box_txt">
+                    The Flying Apsaras of Dunhuang are celestial beings in Buddhist art, originating from India and evolving into a uniquely Chinese style. 
+                </p>
+            </li>
+            <li>
+                <div class="works_box_img">
+                </div>
+                <h3>
+                    敦煌音韵
+                </h3>
+                <p class="works_box_txt">
+                    Inspired by the Tang Dynasty murals of Cave 220 in Mogao Grottoes, this digital recreation revives the grand orchestra and lantern-bearing Bodhisattvas.
+                </p>
+            </li>
+            <li>
+                <div class="works_box_img">
+                </div>
+                <h3>
+                    敦煌壁画
+                </h3>
+                <p class="works_box_txt">
+                    Inspired by the Tang Dynasty (618–907 CE) murals in Cave 220 of Mogao Grottoes, this digital recreation revives the iconic grand orchestra and lamp-offering bodhisattva scene. 
+                </p>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom-button">
+        <a href="#" id="backToTop">快捷跳转</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="./index.html">网站首页</a>
+            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+            <a href="./history.html">历史简介</a>
+            <a href="./music.html">乐器主题</a>
+            <a href="./dance.html">舞蹈主题</a>
+            <a href="Scripture.html">敦煌手势</a>
+            <a href="creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <img class="footer_left" src="./images/footer_left.png" alt="">
+            <img class="footer_right" src="./images/footer_right.png" alt="">
+            <p>
+                版权所有©23人工智能D班第八组
+            </p>
+        </div>
+    </footer>
+    <!-- AI助手 -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-button">
+            <img src="./images/ai-assistant.png" alt="AI助手">
+        </button>
+        <div class="ai-assistant-window">
+            <div class="ai-assistant-header">
+                <h3>敦煌文化AI助手</h3>
+                <img src="./images/ai-assistant.png" alt="AI助手">
+                <button class="ai-assistant-close">&times;</button>
+            </div>
+            <div class="ai-assistant-messages">
+                <div class="message assistant">
+                    您好！我是敦煌文化AI助手，很高兴为您服务。请问有什么可以帮您的吗？
+                </div>
+            </div>
+            <div class="ai-assistant-input">
+                <input type="text" placeholder="请输入您的问题...">
+                <button>发送</button>
+            </div>
+        </div>
+        <!-- 添加初始提示对话框 -->
+        <div class="initial-tooltip">
+            <button class="tooltip-close">&times;</button>
+            <p>我是AI助手敦敦，需要我帮助你了解敦煌文化吗？</p>
+        </div>
+    </div>
+</body>
+
+</html>

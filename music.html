@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>音乐专题</title>
+    <link rel="stylesheet" href="./css/allstyle.css">
+    <link rel="stylesheet" href="./css/music.css">
+    <link rel="stylesheet" href="./css/ai-assistant.css">
+    <script src="./js/user.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/music.js"></script>
+    <script src="./js/ai-assistant.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 添加背景图样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(./images/1.jpg) no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* 添加半透明遮罩，确保文字可读性 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 调整透明度 */
+            z-index: -1;
+        }
+        
+        /* 确保内容在遮罩上方 */
+         #banner2, #nav2, #main_box, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+        <div class="heard">
+            <div class="heard_left">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">网站首页</a>
+                        </li>
+                        <li>
+                            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+                        </li>
+                        <li>
+                            <a href="./history.html">历史简介</a>
+                        </li>
+                        <li class="rop-down-menu-box">
+                            <div class="drop-down-menu">
+                                <a href="#">壁画精选</a>
+                                <div class="drop-box">
+                                    <a href="./music.html">乐器主题</a>
+                                    <a href="./dance.html">舞蹈主题</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Scripture.html">敦煌手势</a>
+                        </li>
+                        <li>
+                            <a href="./creation.html">寻梦敦煌</a>
+                        </li>
+                        <li>
+                            <a href="./shop.html">周边商城</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heard_right">
+                <input type="text" id="simpleSearch" placeholder="搜索页面..." list="pageSuggestions">
+                <datalist id="pageSuggestions">
+                    <option value="敦煌学的由来">
+                    <option value="历史简介">
+                    <option value="音乐主题">
+                    <option value="舞蹈主题">
+                    <option value="敦煌手势">
+                    <option value="寻梦敦煌">
+                </datalist>
+                <div class="user-auth">
+                    <a href="login.html" id="loginLink">登录</a> 
+                    <span id="userGreeting" style="display:none;">
+                        用户 <span id="usernameDisplay"></span>
+                        <a href="javascript:void(0)" id="logoutLink">退出</a>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <!-- 说明 -->
+    <div id="illustrate">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="./images/m1.png" alt="乐器轮播图1">
+                    <div class="illustrate_box">
+                        <h3>敦煌乐器</h3>
+                        <p>敦煌壁画中记载了从北魏至元代近千年的乐器图像，包含琵琶、箜篌、筚篥等56种乐器，真实记录了丝绸之路上多元音乐文化的交融，被誉为"墙壁上的音乐博物馆"。</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/m2.png" alt="乐器轮播图2">
+                    <div class="illustrate_box">
+                        <h3>反弹琵琶</h3>
+                        <p>莫高窟112窟《伎乐图》中的经典形象，舞者反背琵琶于颈后，左手按弦右手拨弹，这种高难度演奏姿势展现了唐代乐舞的巅峰技艺，成为敦煌艺术的标志性符号。</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/m3.png" alt="乐器轮播图3">
+                    <div class="illustrate_box">
+                        <h3>凤首箜篌</h3>
+                        <p>源自波斯经龟兹传入的竖琴类乐器，在敦煌壁画中出现多达200余次。其凤鸟造型的琴首、23弦的形制，见证了西亚音乐艺术通过丝路东传的历史轨迹。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide">❮</button>
+                <div class="slider-dots"></div>
+                <button class="next-slide">❯</button>
+            </div>
+        </div>
+    </div>
+    <!-- 夜间模式切换按钮 -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    <!-- 中间主要内容 -->
+    <div class="main_box2">
+        <ul>
+            <li>
+                <div class="list_img">
+                    <span>
+                        乐器
+                    </span>
+                    <img src="./images/a1.png" alt="">
+                </div>
+                <p>鼗鼓​</p>
+                <p>&#9733&#9733&#9733&#9733&#9733;</p>
+                <p>形似圆桶，大头有突出圆形物，因鼓面如爵脐得名的击奏膜鸣乐器。</p>
+                
+
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        乐器
+                    </span>
+                    <img src="./images/a2.png" alt="">
+                </div>
+                <p>箜篌​</p>
+                <p>&#9733&#9733&#9733&#9733&#9733</p>
+                <p>又称"坎候"或"空候"。可分为卧箜篌、竖箜篌和凤首箜篌三种类型。</p>
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        乐器
+                    </span>
+                    <img src="./images/a3.png" alt="">
+                </div>
+                <p>​​筚篥​</p>
+                <p>&#9733&#9733&#9733&#9733&#9733</p>
+                <p>又称管子或风管，管身多为木制，上开八孔，管口插苇制哨子而发音</p>
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        乐器
+                    </span>
+                    <img src="./images/a4.png" alt="">
+                </div>
+                <p>​笙​</p>
+                <p>&#9733&#9733&#9733&#9733&#9733</p>
+                <p>笙簧为竹制，其簧片在管中，通过簧片与管中气柱发生共鸣而发音。</p>
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        乐器
+                    </span>
+                    <img src="./images/a5.png" alt="">
+                </div>
+                <p>琵琶​​</p>
+                <p>&#9733&#9733&#9733&#9733&#9734;</p>
+                <p>由头部（琴头、弦轴和山口）、琴弦和身部（音箱、"琵琶背"等）构成。</p>
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        乐器
+                    </span>
+                    <img src="./images/a6.png" alt="">
+                </div>
+                <p>齐鼓​</p>
+                <p>&#9733&#9733&#9733&#9733&#9734;</p>
+                <p>亦称"齐鼓"，形状如漆桶，大头设有一突出圆形物于鼓面，如爵脐。</p>
+            </li>
+        </ul>
+    </div>
+    <div class="bottom-button">
+        <a href="#" id="backToTop">快捷跳转</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="./index.html">网站首页</a>
+            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+            <a href="./history.html">历史简介</a>
+            <a href="./music.html">乐器主题</a>
+            <a href="./dance.html">舞蹈主题</a>
+            <a href="Scripture.html">敦煌手势</a>
+            <a href="creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <img class="footer_left" src="./images/footer_left.png" alt="">
+            <img class="footer_right" src="./images/footer_right.png" alt="">
+            <p>
+                版权所有©23人工智能D班第八组
+            </p>
+        </div>
+    </footer>
+    <!-- AI助手 -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-button">
+            <img src="./images/ai-assistant.png" alt="AI助手">
+        </button>
+        <div class="ai-assistant-window">
+            <div class="ai-assistant-header">
+                <h3>敦煌文化AI助手</h3>
+                <img src="./images/ai-assistant.png" alt="AI助手">
+                <button class="ai-assistant-close">&times;</button>
+            </div>
+            <div class="ai-assistant-messages">
+                <div class="message assistant">
+                    您好！我是敦煌文化AI助手，很高兴为您服务。请问有什么可以帮您的吗？
+                </div>
+            </div>
+            <div class="ai-assistant-input">
+                <input type="text" placeholder="请输入您的问题...">
+                <button>发送</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敦煌学的由来</title>
+    <link rel="stylesheet" href="./css/allstyle.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/DunhuangStudies.css">
+    <link rel="stylesheet" href="./css/ai-assistant.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 添加背景图样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(./images/1.jpg) no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* 添加半透明遮罩，确保文字可读性 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 调整透明度 */
+            z-index: -1;
+        }
+        
+        /* 确保内容在遮罩上方 */
+        #banner2, #nav2, #main_box, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <script src="./js/user.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/DunhuangStudies.js"></script>
+    <script src="./js/ai-assistant.js"></script>
+</head>
+<body class="page-DunhuangStudies">
+    <!-- 导航栏 -->
+    <header>
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+        <div class="heard">
+            <div class="heard_left">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">网站首页</a>
+                        </li>
+                        <li>
+                            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+                        </li>
+                        <li>
+                            <a href="./history.html">历史简介</a>
+                        </li>
+                        <li class="rop-down-menu-box">
+                            <div class="drop-down-menu">
+                                <a href="#">壁画精选</a>
+                                <div class="drop-box">
+                                    <a href="./music.html">乐器主题</a>
+                                    <a href="./dance.html">舞蹈主题</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Scripture.html">敦煌手势</a>
+                        </li>
+                        <li>
+                            <a href="./creation.html">寻梦敦煌</a>
+                        </li>
+                        <li>
+                            <a href="./shop.html">周边商城</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heard_right">
+                <input type="text" id="simpleSearch" placeholder="搜索页面..." list="pageSuggestions">
+                <datalist id="pageSuggestions">
+                    <option value="敦煌学的由来">
+                    <option value="历史简介">
+                    <option value="音乐主题">
+                    <option value="舞蹈主题">
+                    <option value="敦煌手势">
+                    <option value="寻梦敦煌">
+                </datalist>
+                <div class="user-auth">
+                    <a href="login.html" id="loginLink">登录</a> 
+                    <span id="userGreeting" style="display:none;">
+                        用户 <span id="usernameDisplay"></span>
+                        <a href="javascript:void(0)" id="logoutLink">退出</a>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+
+     <!-- 夜间模式切换按钮 -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fa fa-moon-o"></i>
+    </div>
+
+    <!-- 中间内容区域 -->
+    <!-- 中间内容区域 -->
+    <div id="banner2">
+        <div class="carousel-container2">
+            <div class="carousel-slide2">
+                <img src="./images/banner-two.png" alt="敦煌文化">
+                <img src="./images/wenhua1.png" alt="敦煌艺术">
+                <img src="./images/banner-three.jpg" alt="">
+            </div>
+            <button class="carousel-btn2 prev-btn2">&#10094;</button>
+            <button class="carousel-btn2 next-btn2">&#10095;</button>
+            <div class="banner2">
+                <h3>敦煌学的由来</h3>
+                <p>The emergence of Dunhuang studies</p>
+            </div>
+        </div>
+    </div>
+    <!-- 第二导航栏 -->
+    <div id="nav2">
+        <div class="nav2_box">
+            <a href="./index.html">主页</a> - <a href="./DunhuangStudies.html">敦煌学的由来</a>
+        </div>
+    </div>
+    <!-- 中间主要内容 -->
+    <div id="main_box">
+        <h3>敦煌学的由来<span>(The emergence of Dunhuang studies)</span> </h3>
+        <div class="main_txt">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="zh">中文</button>
+                <button class="lang-btn" data-lang="en">English</button>
+            </div>
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="./images/wenhua.png" alt="敦煌文化">
+                    <img src="./images/wenhua1.png" alt="敦煌艺术">
+                    <img src="./images/wenhua2.png" alt="敦煌壁画">
+                </div>
+                <button class="carousel-btn prev-btn">&#10094;</button>
+                <button class="carousel-btn next-btn">&#10095;</button>
+            </div>
+            <p data-translate-id="content1">
+                1900年农历5月26日，敦煌莫高窟惊现藏经洞，万千典籍堆叠如丘。五万余件文献中，佛经占比逾九成，兼有道经、摩尼教典、景教文书，更有官牍、典籍、账册、诗词等世俗文本。除汉文写卷外，更藏吐蕃、西夏、于阗、天竺等十余种古文字遗珍，铜佛、法器等圣物亦同窟而出。
+            </p>
+            <p data-translate-id="content2">
+                此发现与殷墟甲骨、明清档案、敦煌简牍并称四大文献奇迹。这些写本与石窟艺术互为表里，成为研究中古丝路的密钥，催生国际显学"敦煌学"，被誉为开启中世纪世界的金钥匙。
+            </p>
+            <p data-translate-id="content3">
+                腐败的清政府未能对其进行应有的保护，致使藏经洞中的大批敦煌遗书和文物先后被外国"探险队"捆载而去，经英、法、日、美、俄等国探险家的盗窃掠夺，藏经洞绝大部分文物不幸流散到世界各地，仅剩下少部分留存于国内，造成中国文化史上的空前浩劫。
+            </p>
+            <p data-translate-id="content4">
+                1910年，敦煌藏经洞劫余文献运藏京师图书馆（今国家图书馆前身）。而今，藏经洞发现已经整整一百年了，中国国家图书馆作为世界上收藏敦煌遗书最多的单位，以其丰富的馆藏，为敦煌学的发展作出了重要贡献。
+            </p>
+            <p data-translate-id="content5">
+                国图与敦煌学会联办百年特展，既揭露文物流散之痛，更彰显遗书之华彩。此举既为振兴民族文脉，亦促世界文明对话；既护佑文化遗产，更助西部文化腾飞，激扬赤子之心。
+            </p>
+            <p data-translate-id="content6">
+                敦煌在中国，敦煌学在世界。敦煌属于整个人类文明。石窟永驻华夏，学术花开五洲。
+            </p>
+            <!-- 添加点赞和评论区域 -->
+            <div class="interaction-area">
+                <div class="like-section">
+                    <button class="like-btn">
+                        <i class="fa fa-heart-o"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                </div>
+                <div class="comment-section">
+                    <div class="comment-stats">
+                        <div class="stat-item">
+                            <i class="fa fa-comments"></i>
+                            <span id="commentCount">0</span> 条评论
+                        </div>
+                        <div class="stat-item">
+                            <i class="fa fa-heart"></i>
+                            <span id="totalLikes">0</span> 个赞
+                        </div>
+                    </div>
+                    <div class="comments-list">
+                        <!-- 评论将在这里动态添加 -->
+                    </div>
+                    <div class="comment-input">
+                        <button class="quick-comment-btn">
+                            <i class="fa fa-smile-o"></i>
+                        </button>
+                        <div class="emoji-picker">
+                            <div class="emoji-list">
+                                <span class="emoji">😊</span>
+                                <span class="emoji">👍</span>
+                                <span class="emoji">❤️</span>
+                                <span class="emoji">🎉</span>
+                                <span class="emoji">✨</span>
+                                <span class="emoji">🌟</span>
+                                <span class="emoji">💫</span>
+                                <span class="emoji">🎨</span>
+                                <span class="emoji">🎭</span>
+                                <span class="emoji">🎪</span>
+                                <span class="emoji">🏺</span>
+                                <span class="emoji">📚</span>
+                            </div>
+                        </div>
+                        <input type="text" placeholder="写下你的评论...">
+                        <button class="send-comment-btn">发送</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-button">
+        <a href="#" id="backToTop">快捷跳转</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="./index.html">网站首页</a>
+            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+            <a href="./history.html">历史简介</a>
+            <a href="./music.html">乐器主题</a>
+            <a href="./dance.html">舞蹈主题</a>
+            <a href="Scripture.html">敦煌手势</a>
+            <a href="creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <img class="footer_left" src="./images/footer_left.png" alt="">
+            <img class="footer_right" src="./images/footer_right.png" alt="">
+            <p>
+                版权所有©23人工智能D班第八组
+            </p>
+        </div>
+    </footer>
+    <!-- AI助手 -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-button">
+            <img src="./images/ai-assistant.png" alt="AI助手">
+        </button>
+        <div class="ai-assistant-window">
+            <div class="ai-assistant-header">
+                <h3>敦煌文化AI助手</h3>
+                <img src="./images/ai-assistant.png" alt="AI助手">
+                <button class="ai-assistant-close">&times;</button>
+            </div>
+            <div class="ai-assistant-messages">
+                <div class="message assistant">
+                    您好！我是敦煌文化AI助手，很高兴为您服务。请问有什么可以帮您的吗？
+                </div>
+            </div>
+            <div class="ai-assistant-input">
+                <input type="text" placeholder="请输入您的问题...">
+                <button>发送</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

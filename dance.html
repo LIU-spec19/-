@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>舞蹈专题</title>
+    <link rel="stylesheet" href="./css/allstyle.css">
+    <link rel="stylesheet" href="./css/dance.css">
+    <link rel="stylesheet" href="./css/ai-assistant.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 添加背景图样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(./images/4.jpg) no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* 添加半透明遮罩，确保文字可读性 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 调整透明度 */
+            z-index: -1;
+        }
+        
+        /* 确保内容在遮罩上方 */
+         #banner2, #nav2, #main_box, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <script src="./js/user.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/dance.js"></script>
+    <script src="./js/ai-assistant.js"></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+        <div class="heard">
+            <div class="heard_left">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">网站首页</a>
+                        </li>
+                        <li>
+                            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+                        </li>
+                        <li>
+                            <a href="./history.html">历史简介</a>
+                        </li>
+                        <li class="rop-down-menu-box">
+                            <div class="drop-down-menu">
+                                <a href="#">壁画精选</a>
+                                <div class="drop-box">
+                                    <a href="./music.html">乐器主题</a>
+                                    <a href="./dance.html">舞蹈主题</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Scripture.html">敦煌手势</a>
+                        </li>
+                        <li>
+                            <a href="./creation.html">寻梦敦煌</a>
+                        </li>
+                        <li>
+                            <a href="./shop.html">周边商城</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heard_right">
+                <input type="text" id="simpleSearch" placeholder="搜索页面..." list="pageSuggestions">
+                <datalist id="pageSuggestions">
+                    <option value="敦煌学的由来">
+                    <option value="历史简介">
+                    <option value="音乐主题">
+                    <option value="舞蹈主题">
+                    <option value="敦煌手势">
+                    <option value="寻梦敦煌">
+                </datalist>
+                <div class="user-auth">
+                    <a href="login.html" id="loginLink">登录</a> 
+                    <span id="userGreeting" style="display:none;">
+                        用户 <span id="usernameDisplay"></span>
+                        <a href="javascript:void(0)" id="logoutLink">退出</a>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <!-- 轮播图 -->
+    <div id="illustrate">
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide active">
+                    <img src="./images/wu1.png" alt="舞蹈轮播图1">
+                    <div class="illustrate_box">
+                        <h3>舞蹈</h3>
+                        <p>敦煌舞蹈以莫高窟壁画中的飞天、伎乐天为灵感，融合西域胡旋舞的灵动与中原宫廷舞的典雅。
+                舞姿飘逸，手势柔美，长绸翻飞如飞天彩带，再现了丝路乐舞的千年神韵。</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/wu2.png" alt="舞蹈轮播图2">
+                    <div class="illustrate_box">
+                        <h3>《丝路花雨》</h3>
+                        <p>一部以敦煌壁画为蓝本创作的大型民族舞剧，其中的反弹琵琶舞段是该剧的经典片段之一。
+                            舞剧通过精彩的舞蹈编排和音乐创作，生动地展现了丝绸之路上的文化交流和爱情故事，将反弹琵琶舞的艺术魅力展现得淋漓尽致。</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="./images/wu3.png" alt="舞蹈轮播图3">
+                    <div class="illustrate_box">
+                        <h3>《缘起・天宫伎乐・反弹琵琶》</h3>
+                        <p>由逍遥舞境创作的原创敦煌古典舞，以敦煌壁画中的天宫乐舞场景为背景，舞者们扮红粉妆、手握琵琶，通过细腻的舞蹈动作和优美的舞姿，再现了壁画中反弹琵琶的美妙意境，给观众带来了一场视觉盛宴。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="prev-slide">❮</button>
+                <div class="slider-dots"></div>
+                <button class="next-slide">❯</button>
+            </div>
+        </div>
+    </div>
+    <!-- 夜间模式切换按钮 -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    <!-- 中间主要内容 -->
+    <div class="main_box2">
+        <ul>
+            <li>
+                <div class="list_img">
+                    <span>
+                        舞蹈
+                    </span>
+                    <img src="./images/d1.png" alt="">
+                </div>
+                <p>经变舞</p>
+                <p>&#9733&#9733&#9733&#9733&#9734;</p>
+                <p>指各种经变图中所表现的舞蹈，这种舞蹈形式规模大，姿态优美。</p>
+                
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        舞蹈
+                    </span>
+                    <img src="./images/d2.png" alt="">
+                </div>
+                <p>飞天舞</p>
+                <p>&#9733&#9733&#9733&#9733&#9734;</p>
+                <p>原名为"闼婆"和"紧那罗"，在古印度神话中是娱乐神和歌舞神。</p>
+                
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        舞蹈
+                    </span>
+                    <img src="./images/d3.png" alt="">
+                </div>
+                <p>礼仪舞</p>
+                <p>&#9733&#9733&#9733&#9734&#9734;</p>
+                <p>是以礼仪为目的而编排的舞蹈,通常被用于祭祀等较为严肃的场合。</p>
+                
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        舞蹈
+                    </span>
+                    <img src="./images/d4.png" alt="">
+                </div>
+                <p>妙音回弹</p>
+                <p>&#9733&#9733&#9733&#9733&#9734;</p>
+                <p>敦煌壁画中反弹琵琶的飞天乐伎，融合西域乐舞与中原韵律的千年绝响。</p>
+                
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        舞蹈
+                    </span>
+                    <img src="./images/d5.png" alt="">
+                </div>
+                <p>丝路花雨</p>
+                <p>&#9733&#9733&#9733&#9734&#9734;</p>
+                <p>以莫高窟为灵感的经典舞剧，再现大唐商旅驼铃与飞天散花的丝路盛景。</p>
+                
+            </li>
+            <li>
+                <div class="list_img">
+                    <span>
+                        舞蹈
+                    </span>
+                    <img src="./images/d6.png" alt="">
+                </div>
+                <p>莲池戏游</p>
+                <p>&#9733&#9733&#9733&#9733&#9734;</p>
+                <p>藻井莲花间嬉戏的化生童子，演绎净土世界天真烂漫的佛教婴戏图。</p>
+                
+            </li>
+        
+        </ul>
+    </div>
+    <div class="bottom-button">
+        <a href="#" id="backToTop">快捷跳转</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="./index.html">网站首页</a>
+            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+            <a href="./history.html">历史简介</a>
+            <a href="./music.html">乐器主题</a>
+            <a href="./dance.html">舞蹈主题</a>
+            <a href="Scripture.html">敦煌手势</a>
+            <a href="creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <img class="footer_left" src="./images/footer_left.png" alt="">
+            <img class="footer_right" src="./images/footer_right.png" alt="">
+            <p>
+                版权所有©23人工智能D班第八组
+            </p>
+        </div>
+    </footer>
+    <!-- AI助手 -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-button">
+            <img src="./images/ai-assistant.png" alt="AI助手">
+        </button>
+        <div class="ai-assistant-window">
+            <div class="ai-assistant-header">
+                <h3>敦煌文化AI助手</h3>
+                <img src="./images/ai-assistant.png" alt="AI助手">
+                <button class="ai-assistant-close">&times;</button>
+            </div>
+            <div class="ai-assistant-messages">
+                <div class="message assistant">
+                    您好！我是敦煌文化AI助手，很高兴为您服务。请问有什么可以帮您的吗？
+                </div>
+            </div>
+            <div class="ai-assistant-input">
+                <input type="text" placeholder="请输入您的问题...">
+                <button>发送</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

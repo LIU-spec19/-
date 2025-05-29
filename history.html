@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史简介</title>
+    <link rel="stylesheet" href="./css/allstyle.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/history.css">
+    <link rel="stylesheet" href="./css/ai-assistant.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 添加背景图样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(./images/2.jpg) no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* 添加半透明遮罩，确保文字可读性 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 调整透明度 */
+            z-index: -1;
+        }
+        
+        /* 确保内容在遮罩上方 */
+        #banner2, #nav2, #main_box, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <script src="./js/user.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/history.js"></script>
+    <script src="./js/ai-assistant.js"></script>
+</head>
+
+<body class="page-history">
+    <!-- 导航栏 -->
+    <header>
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+        <div class="heard">
+            <div class="heard_left">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">网站首页</a>
+                        </li>
+                        <li>
+                            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+                        </li>
+                        <li>
+                            <a href="./history.html">历史简介</a>
+                        </li>
+                        <li class="rop-down-menu-box">
+                            <div class="drop-down-menu">
+                                <a href="#">壁画精选</a>
+                                <div class="drop-box">
+                                    <a href="./music.html">乐器主题</a>
+                                    <a href="./dance.html">舞蹈主题</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Scripture.html">敦煌手势</a>
+                        </li>
+                        <li>
+                            <a href="./creation.html">寻梦敦煌</a>
+                        </li>
+                        <li>
+                            <a href="./shop.html">周边商城</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heard_right">
+                <input type="text" id="simpleSearch" placeholder="搜索页面..." list="pageSuggestions">
+                <datalist id="pageSuggestions">
+                    <option value="敦煌学的由来">
+                    <option value="历史简介">
+                    <option value="音乐主题">
+                    <option value="舞蹈主题">
+                    <option value="敦煌手势">
+                    <option value="寻梦敦煌">
+                </datalist>
+                <div class="user-auth">
+                    <a href="login.html" id="loginLink">登录</a> 
+                    <span id="userGreeting" style="display:none;">
+                        用户 <span id="usernameDisplay"></span>
+                        <a href="javascript:void(0)" id="logoutLink">退出</a>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <!-- 夜间模式切换按钮 -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    <!-- 中间内容区域 -->
+    <div id="banner2">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="./images/banner.png" alt="敦煌壁画1">
+                <img src="./images/his2.jpg" alt="敦煌壁画2">
+                <img src="./images/banner-four.png" alt="banner-four">
+            </div>
+            <button class="carousel-btn prev-btn">&#10094;</button>
+            <button class="carousel-btn next-btn">&#10095;</button>
+            <div class="banner2">
+                <h3>历史简介</h3>
+                <p>Historical introduction</p>
+            </div>
+        </div>
+    </div>
+    <!-- 第二导航栏 -->
+    <div id="nav2">
+        <div class="nav2_box">
+            <a href="./index.html">主页</a> - <a href="./history.html">历史简介</a>
+        </div>
+    </div>
+    <!-- 中间主要内容 -->
+    <div id="main_box">
+        <h3>历史简介<span>(Historical introduction)</span> </h3>
+        <div class="main_txt">
+            <div class="video">
+                <video   controls autoplay muted>
+                    <source src="images/history.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="quiz-launcher">
+                <button id="launchQuiz">敦煌知识小测试</button>
+            </div>
+            
+            <div class="quiz-container" id="quizContainer" style="display:none;">
+                <p class="quiz-tip">(请观看上方视频后回答问题)</p>
+                <form id="dunhuangQuiz">
+                    <div class="quiz-question" id="question1" style="display:none;">
+                        <h4>视频里讲解到鸣沙山东麓的断崖上排列着多少个洞窟呢？</h4>
+                        <label>
+                            <input type="radio" name="q1" value="A"> A. 492个
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="B"> B. 735个
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="C"> C. 856个
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="D"> D. 1024个
+                        </label>
+                    </div>
+                    <div class="quiz-question" id="question2" style="display:none;">
+                        <h4>敦煌莫高窟最早开凿于哪个朝代？</h4>
+                        <label>
+                            <input type="radio" name="q1" value="A"> A. 西汉
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="B"> B. 前秦
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="C"> C. 北魏
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="D"> D. 隋朝
+                        </label>
+                    </div>
+                    <div class="quiz-question" id="question3" style="display:none;">
+                        <h4>敦煌藏经洞（第17窟）是在哪一年被发现的？</h4>
+                        <label>
+                            <input type="radio" name="q1" value="A"> A. 1899年
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="B"> B. 1900年
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="C"> C. 1901年
+                        </label>
+                        <label>
+                            <input type="radio" name="q1" value="D"> D. 1902年
+                        </label>
+                    </div>
+                    <div class="quiz-buttons">
+                        <button type="button" id="submitQuiz">提交答案</button>
+                        <button type="button" id="closeQuiz">关闭测试</button>
+                    </div>
+                </form>
+            </div>
+            
+            <p>
+                敦煌距今已有2000多年的历史。秦汉之前，这里居住着月氏、乌孙等民族。西汉初，漠北的匈奴赶走月氏，占领敦煌。元狩二年（前121）西汉军队打败河西匈奴，敦煌与河西走廊归入西汉王朝版图。元鼎六年（前111）西汉在敦煌设郡，与酒泉、张掖、武威并称河西四郡。在敦煌之北修筑了长城，在西部设立了阳关、玉门关。从此，敦煌成为西域进入河西走廊与中原的门户和军事重镇。为了巩固敦煌的战略要地，政府从内地移民来此定居，调遣士兵屯田戎守。西汉王朝对敦煌的经营与开发，确立了敦煌在历史上的重要地位。经过东汉王朝与曹魏政权的继续经营与开发，敦煌在较长时期内保持相对稳定，成为丝绸之路上一处重要的商品交易中心和粮食生产基地。中原文化在这里生根和发展，儒家经典得到传播。产生于印度的佛教文化也传到了敦煌，西晋时号称"敦煌菩萨"的译经大师竺法护及其弟子在此译经传教。
+            </p>
+            <p>
+                十六国时期，先后由前凉、前秦、后凉、西凉、北凉五个政权统治敦煌。此时中原大乱，战争频繁。唯敦煌相对平安，人口增加，中原与河西走廊的百姓避乱在此，中原汉晋文化在敦煌与河西走廊得以保存和延续。敦煌产生一批著名儒家学者，他们设馆讲学，著书立说。中原传统文化在敦煌已十分成熟。与此同时，西行求法与东来传教的佛教僧人都经过敦煌，促进了敦煌佛教的发展。《魏书·释老志》说："敦煌地接西域，道俗交得，其旧式村坞相属，多有塔寺"。敦煌莫高窟应运而生。据唐代圣历元年（698）李克让修《莫高窟佛龛碑》记："莫高窟者，厥初，秦建元二年（366）有沙门乐僔，戒行清虚，执心恬静，尝仗锡林野，行至此山，忽见金光，状有千佛......造窟一龛。次有法良禅师，从东届此，又干僔师窟侧更即营建，伽蓝之起，滥觞二僧。"此后，北魏宗室东阳王元太荣、北周贵族建平公于义先后出任瓜州（敦煌）刺史，信奉佛教，莫高窟的开窟造像活动逐渐发展兴盛起来。
+            </p>
+            <p>
+                隋代统一南北，击败西北的突厥和吐谷浑侵扰，保持丝路畅通，商贸繁盛。文帝和炀帝倡兴佛教，令天下各州建造舍利塔，瓜州也在崇教寺（莫高窟）起塔，宫廷写经也传至敦煌。短暂的隋代，在敦煌大兴开窟之风。唐王朝前期扼制了西域最大的威胁——西突厥的进犯，在西域设立安西都护和安西四镇。为加强军事防卫，在敦煌和河西走廊设立豆卢军、墨离军、王门军、赤水军、建康军等河西十军，使敦煌经济得到稳步发展，丝绸之路全线畅通，"伊吾之西，波斯以东，朝贡不绝，商旅相继"。中西经济文化交流频繁。敦煌石窟的营造达到了极盛，敦煌文化进一步凝聚了来自中原的汉文化，以及来自印度、西亚、中亚的文化。
+            </p>
+            <div class="read-more-content">
+                <p>
+                    元代以后敦煌停止开窟，逐渐冷落荒废。明嘉靖七年（1528）封闭嘉峪关，使敦煌成为边塞游牧之地。清康熙五十七年（1718）平定新疆，雍正元年（1723）在敦煌设沙州所，三年（1725）改沙州卫，并从甘肃各州移民敦煌屯田，重修沙州城。乾隆二十五年（1760）改沙州卫为敦煌县，敦煌经济开始恢复。莫高窟开始被人们注意。清光绪二十六年（1900）发现了震惊世界的藏经洞。不幸的是，在晚清政府腐败无能、西方列强侵略中国的特定历史背景下，藏经洞文物发现后不久，英人斯坦因、法人伯希和、日人橘瑞超和吉川小一郎、俄人鄂登堡等西方探险家接踵而至敦煌，以不公正的手段，从王道士手中骗取大量藏经洞文物，致使藏经洞文物惨遭劫掠，绝大部分不幸流散，分藏于英、法、俄、日等国的众多公私收藏机构，仅有少部分保存于国内，造成中国文化史上的空前浩劫，给中国人民留下了难以弥合的心灵创伤。
+                </p>
+                <p>
+                    从开凿的第一天起，莫高窟便以它那兼容并蓄的恢宏气度，吸取和融合了当时欧亚大陆所有人类文明的精华。当我们面对那一尊尊塑像，那一方方壁画，那一卷卷文书时，就会被莫高窟那博大精深的多元化艺术进力及其丰富深厚的文化底蕴所吸引、打动，内心感到震撼和折服。我们同时也会深刻地认识到，如果没有古代河西地区繁荣的经济文化，就没有莫高窟；如果没有对外经济文化交流和中华民族海纳百川的广阔胸怀，也就不会有莫高窟。
+                </p>
+                <p>中华人民共和国成立后，敦煌莫高窟劫后余生的文物才得到了真正有效的保护和科学合理的利用。作为国务院首批公布的全国重点文物保护单位之一，特别是改革开放以来，敦煌文物保护事业步入了蓬勃发展的新时期。</p>
+                <p>世纪之交的2000年，是敦煌藏经洞发现100周年，敦煌学也将走过了百年历程，全世界敦煌学学者和关心敦煌的人士都在关注着这一具有历史意义的时刻。</p>
+                <p>灿烂的敦煌文化遗产，吸引着全世界的目光，敦煌属于中国，也属于全人类。敦煌文化代表着中国古代文明的辉煌，敦煌文化必将在新世纪发扬光大。</p>
+            </div>
+            <div class="read-more-container">
+                <button class="read-more-btn">点击显示更多内容</button>
+            </div>
+        </div>
+        <!-- 在main_box div内添加 -->
+        <div class="timeline-container">
+            <h3>敦煌历史时间轴</h3>
+            <div class="timeline-controls">
+                <button id="expandAllBtn">展示所有</button>
+                <button id="collapseAllBtn">折叠所有</button>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-year="前121">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>霍去病收复河西</h4>
+                        <p>汉武帝元狩二年，骠骑将军霍去病大败匈奴，河西走廊首次纳入中原王朝版图。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="前111">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>西汉设敦煌郡</h4>
+                        <p>元鼎六年(前111年)西汉在敦煌设郡，与酒泉、张掖、武威并称河西四郡，成为丝绸之路重要枢纽。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="60">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>西域都护府设立</h4>
+                        <p>汉宣帝神爵二年设立西域都护府，敦煌成为经营西域的军事和行政中心。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="366">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>莫高窟开凿</h4>
+                        <p>前秦建元二年，沙门乐僔在敦煌鸣沙山东麓开凿第一个洞窟，标志着莫高窟佛教艺术圣地的诞生。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="786">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>吐蕃统治时期</h4>
+                        <p>敦煌进入吐蕃统治时期(786-848年)，佛教艺术融合了吐蕃文化元素。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="848">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>归义军时期</h4>
+                        <p>张议潮率众起义，建立归义军政权，敦煌进入相对独立发展时期。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="1036">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>西夏占领敦煌</h4>
+                        <p>西夏攻占沙州(敦煌)，莫高窟艺术开始融入西夏佛教文化特色。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="1227">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>蒙古帝国统治</h4>
+                        <p>蒙古灭西夏后控制敦煌，元朝时期敦煌仍是东西方文化交流的重要节点。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="1900">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>藏经洞发现</h4>
+                        <p>道士王圆箓发现莫高窟藏经洞(第17窟)，出土5万余件4-11世纪的文书文物。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="1944">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>敦煌艺术研究所成立</h4>
+                        <p>国立敦煌艺术研究所成立(今敦煌研究院前身)，开始系统保护和研究敦煌文化遗产。</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item" data-year="1987">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h4>列入世界文化遗产</h4>
+                        <p>莫高窟被联合国教科文组织列入《世界文化遗产名录》，成为人类共同的文化瑰宝。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-button">
+        <a href="#" id="backToTop">快捷跳转</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="./index.html">网站首页</a>
+            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+            <a href="./history.html">历史简介</a>
+            <a href="./music.html">乐器主题</a>
+            <a href="./dance.html">舞蹈主题</a>
+            <a href="Scripture.html">敦煌手势</a>
+            <a href="creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <img class="footer_left" src="./images/footer_left.png" alt="">
+            <img class="footer_right" src="./images/footer_right.png" alt="">
+            <p>
+                版权所有©23人工智能D班第八组
+            </p>
+        </div>
+    </footer>
+    <!-- AI助手 -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-button">
+            <img src="./images/ai-assistant.png" alt="AI助手">
+        </button>
+        <div class="ai-assistant-window">
+            <div class="ai-assistant-header">
+                <h3>敦煌文化AI助手</h3>
+                <img src="./images/ai-assistant.png" alt="AI助手">
+                <button class="ai-assistant-close">&times;</button>
+            </div>
+            <div class="ai-assistant-messages">
+                <div class="message assistant">
+                    您好！我是敦煌文化AI助手，很高兴为您服务。请问有什么可以帮您的吗？
+                </div>
+            </div>
+            <div class="ai-assistant-input">
+                <input type="text" placeholder="请输入您的问题...">
+                <button>发送</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>寻梦敦煌</title>
+    <link rel="stylesheet" href="./css/allstyle.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/creation.css">
+    <link rel="stylesheet" href="./css/ai-assistant.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 添加背景图样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(./images/banner-one.png) no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        /* 添加半透明遮罩，确保文字可读性 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 调整透明度 */
+            z-index: -1;
+        }
+        
+        /* 确保内容在遮罩上方 */
+         #banner2, #nav2, #main_box, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    
+</head>
+
+<body class="page-creation">
+    <!-- 导航栏 -->
+    <header>
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+        <div class="heard">
+            <div class="heard_left">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">网站首页</a>
+                        </li>
+                        <li>
+                            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+                        </li>
+                        <li>
+                            <a href="./history.html">历史简介</a>
+                        </li>
+                        <li class="rop-down-menu-box">
+                            <div class="drop-down-menu">
+                                <a href="#">壁画精选</a>
+                                <div class="drop-box">
+                                    <a href="./music.html">乐器主题</a>
+                                    <a href="./dance.html">舞蹈主题</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Scripture.html">敦煌手势</a>
+                        </li>
+                        <li>
+                            <a href="./creation.html">寻梦敦煌</a>
+                        </li>
+                        <li>
+                            <a href="./shop.html">周边商城</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heard_right">
+                <input type="text" id="simpleSearch" placeholder="搜索页面..." list="pageSuggestions">
+                <datalist id="pageSuggestions">
+                    <option value="敦煌学的由来">
+                    <option value="历史简介">
+                    <option value="音乐主题">
+                    <option value="舞蹈主题">
+                    <option value="敦煌手势">
+                    <option value="寻梦敦煌">
+                </datalist>
+                <div class="user-auth">
+                    <a href="login.html" id="loginLink">登录</a> 
+                    <span id="userGreeting" style="display:none;">
+                        用户 <span id="usernameDisplay"></span>
+                        <a href="javascript:void(0)" id="logoutLink">退出</a>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <!-- 夜间模式切换按钮 -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    <!-- 中间内容区域 -->
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="./images/banner-one.png" alt="banner1">
+            <img src="./images/banner-two.png" alt="banner2">
+            <img src="./images/banner-three.jpg" alt="banner3">
+        </div>
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <button class="carousel-btn next-btn">&#10095;</button>
+        <div class="banner2">
+            <h3>寻梦敦煌</h3>
+            <p>In Dunhuang, everything is as colorful as spring flowers</p>
+        </div>
+    </div>
+
+    <!-- 第二导航栏 -->
+    <div id="nav2">
+        <div class="nav2_box">
+            <a href="./index.html">主页</a> - <a href="./creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <!-- 中间主要内容 -->
+    <div id="main_box2">
+        <div class="mian_box2">
+            <h3>寻梦敦煌<span>(In Dunhuang, everything is as colorful as spring flowers)</span> </h3>
+            <ul class="Co_create_works_box">
+                <li>
+                    <div class="works_box_img" data-bg-image="images/create1.png">
+                        <button class="zoom-btn">放大图片</button>
+                    </div>
+                    <h3>
+                        敦煌纹样
+                    </h3>
+                    <p class="works_box_txt">
+                        敦煌纹样是研究敦煌艺术中装饰图案体系的重要领域，主要依托莫高窟壁画、彩塑及藏经洞出土的织物、经幡等实物遗存..
+                        <br><br>点击查看更多
+                    </p>
+                    <div class="full-content" style="display:none;">
+                        <h4>敦煌纹样：丝路文明的装饰密码</h4>
+                        <br>
+                        <p>敦煌纹样包含藻井莲花、忍冬缠枝、联珠狩猎等30余类图案体系。莫高窟第407窟的"三兔共耳"藻井，通过三只兔子共用三只耳朵的循环设计，展现了古代匠人对数学美学的深刻理解。这些纹样融合了希腊茛苕叶、波斯联珠纹与中国云气纹的特征，是丝绸之路物质文化交流的视觉见证。</p>
+                        <p>当代设计师常从敦煌纹样中提取元素，应用于服饰、建筑装饰等领域。其对称构图和流动线条，至今仍是东方美学的典范。</p>
+                    </div>   
+                </li>
+                <li>
+                    <div class="works_box_img" data-bg-image="images/create2.png">
+                        <button class="zoom-btn">放大图片</button>
+                    </div>
+                    <h3>
+                        敦煌飞天
+                    </h3>
+                    <p class="works_box_txt">
+                        敦煌飞天是佛教艺术中的经典形象，源于印度，经西域传入中原，在敦煌壁画中发展至鼎盛。飞天以飘逸的形态展现于莫高窟各时期洞窟，展现了丝绸之路上多元文化的交融..
+                        <br>点击查看更多
+                    </p>
+                    <div class="full-content" style="display:none;">
+                        <h4>敦煌飞天：千年乐舞的永恒瞬间</h4>
+                        <br>
+                        <p>莫高窟现存飞天形象6000余身，从北朝秀骨清像到唐代丰腴飘逸，演变出17种典型姿态。第320窟的"双飞天"以逆风飞扬的飘带和散落天花，创造了"吴带当风"的经典范式。飞天不持乐器时称"散花飞天"，持乐器则构成"天宫伎乐"，其动态韵律启发了现代舞蹈《丝路花雨》的创作。</p>
+                        <p>研究表明，飞天形象的演变轨迹与丝绸之路佛教艺术东传路线高度吻合，是宗教艺术本土化的鲜活案例。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="works_box_img" data-bg-image="images/create3.png">
+                        <button class="zoom-btn">放大图片</button>
+                    </div>
+                    <h3>
+                        敦煌音韵
+                    </h3>
+                    <p class="works_box_txt">
+                        敦煌音韵是研究敦煌文献中汉语语音系统的重要领域，主要依托藏经洞出土的唐代写本，如《切韵》《唐韵》残卷及佛经音义文献..
+                        <br><br>点击查看更多
+                    </p>
+                    <div class="full-content" style="display:none;">
+                        <h4>敦煌音韵：凝固在壁画中的交响</h4>
+                        <br>
+                        <p>敦煌壁画记载了44种乐器图像，包括失传的箜篌、方响、筚篥等。第112窟《观无量寿经变》中的"反弹琵琶"舞姿，证实了唐代存在这种高难度演奏技法。藏经洞出土的《敦煌乐谱》25首曲谱，使用"工尺谱"记谱法，经当代学者解译后重现了《倾杯乐》《伊州》等盛唐名曲。</p>
+                        <p>这些音乐史料不仅改写了中国音乐史，更揭示了印度、中亚与中原乐器的融合过程，堪称古代"一带一路"的音乐基因库。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="works_box_img" data-bg-image="images/create4.png">
+                        <button class="zoom-btn">放大图片</button>
+                    </div>
+                    <h3>
+                        敦煌壁画
+                    </h3>
+                    <p class="works_box_txt">
+                        敦煌壁画是敦煌莫高窟艺术的核心组成部分，主要创作于4至14世纪，现存壁画4.5万平方米。这些壁画以佛教题材为主，涵盖经变画、本生故事、佛传故事等..
+                        <br>点击查看更多
+                    </p>
+                    <div class="full-content" style="display:none;">
+                        <h4>敦煌壁画：墙壁上的百科全书</h4>
+                        <br>
+                        <p>45000平方米壁画覆盖了佛经故事、社会民俗等题材。第257窟《九色鹿经图》采用"异时同图"手法，将多个情节绘于同一画面；第61窟《五台山图》则是最早的立体山水地图。壁画中出现的牛车、胡商、耕作场景，生动记录了4-14世纪的社会生活细节。</p>
+                        <p>矿物颜料的使用使壁画历经千年仍鲜艳如新，石青、朱砂等色彩的提取工艺，至今仍是传统工艺研究的重要课题。</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="bottom-button">
+        <a href="#" id="backToTop">快捷跳转</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="./index.html">网站首页</a>
+            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+            <a href="./history.html">历史简介</a>
+            <a href="./music.html">乐器主题</a>
+            <a href="./dance.html">舞蹈主题</a>
+            <a href="Scripture.html">敦煌手势</a>
+            <a href="creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <!-- 弹出窗口 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-text"></p>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <img class="footer_left" src="./images/footer_left.png" alt="">
+            <img class="footer_right" src="./images/footer_right.png" alt="">
+            <p>
+                版权所有©23人工智能D班第八组
+            </p>
+        </div>
+        
+    </footer>
+    <!-- AI助手 -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-button">
+            <img src="./images/ai-assistant.png" alt="AI助手">
+        </button>
+        <div class="ai-assistant-window">
+            <div class="ai-assistant-header">
+                <h3>敦煌文化AI助手</h3>
+                <img src="./images/ai-assistant.png" alt="AI助手">
+                <button class="ai-assistant-close">&times;</button>
+            </div>
+            <div class="ai-assistant-messages">
+                <div class="message assistant">
+                    您好！我是敦煌文化AI助手，很高兴为您服务。请问有什么可以帮您的吗？
+                </div>
+            </div>
+            <div class="ai-assistant-input">
+                <input type="text" placeholder="请输入您的问题...">
+                <button>发送</button>
+            </div>
+        </div>
+    </div>
+    <script src="./js/user.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/creation.js"></script>
+    <script src="./js/ai-assistant.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>敦煌手势</title>
+    <link rel="stylesheet" href="./css/allstyle.css">
+    <link rel="stylesheet" href="./css/banner.css">
+    <link rel="stylesheet" href="./css/Scripture.css">
+    <link rel="stylesheet" href="./css/ai-assistant.css">
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        /* 添加背景图样式 */
+        body {
+            margin: 0;
+            padding: 0;
+            background: url(./images/banner-three.jpg) no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        /* 添加半透明遮罩，确保文字可读性 */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(255, 255, 255, 0.65); /* 调整透明度 */
+            z-index: -1;
+        }
+        
+        /* 确保内容在遮罩上方 */
+        #banner2, #nav2, #main_box, footer {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+    <script src="./js/user.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/Scripture.js"></script>
+    <script src="./js/ai-assistant.js"></script>
+</head>
+
+<body class="page-Scripture">
+    <!-- 导航栏 -->
+    <header>
+        <div class="reading-progress">
+            <div class="reading-progress-bar"></div>
+        </div>
+        <div class="heard">
+            <div class="heard_left">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="">
+                </div>
+                <nav>
+                    <ul>
+                        <li>
+                            <a href="./index.html">网站首页</a>
+                        </li>
+                        <li>
+                            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+                        </li>
+                        <li>
+                            <a href="./history.html">历史简介</a>
+                        </li>
+                        <li class="rop-down-menu-box">
+                            <div class="drop-down-menu">
+                                <a href="#">壁画精选</a>
+                                <div class="drop-box">
+                                    <a href="./music.html">乐器主题</a>
+                                    <a href="./dance.html">舞蹈主题</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="./Scripture.html">敦煌手势</a>
+                        </li>
+                        <li>
+                            <a href="./creation.html">寻梦敦煌</a>
+                        </li>
+                        <li>
+                            <a href="./shop.html">周边商城</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="heard_right">
+                <input type="text" id="simpleSearch" placeholder="搜索页面..." list="pageSuggestions">
+                <datalist id="pageSuggestions">
+                    <option value="敦煌学的由来">
+                    <option value="历史简介">
+                    <option value="音乐主题">
+                    <option value="舞蹈主题">
+                    <option value="敦煌手势">
+                    <option value="寻梦敦煌">
+                </datalist>
+                <div class="user-auth">
+                    <a href="login.html" id="loginLink">登录</a> 
+                    <span id="userGreeting" style="display:none;">
+                        用户 <span id="usernameDisplay"></span>
+                        <a href="javascript:void(0)" id="logoutLink">退出</a>
+                    </span>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </header>
+    <!-- 夜间模式切换按钮 -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fa fa-moon-o"></i>
+    </div>
+    <!-- 轮播图区域 -->
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="./images/banner-three.jpg" alt="banner-three">
+            <img src="./images/wenhua1.png" alt="wenhua1">
+        </div>
+        <button class="carousel-btn prev-btn">&#10094;</button>
+        <button class="carousel-btn next-btn">&#10095;</button>
+        <div class="banner2">
+            <h3>佛之手印——敦煌的极简美学</h3>
+            <p>The handprint of the Buddha, the minimalist aesthetics of Dunhuang</p>
+        </div>
+    </div>
+    <!-- 第二导航栏 -->
+    <div id="nav2">
+        <div class="nav2_box">
+            <a href="./index.html">主页</a> - <a href="./Scripture.html">敦煌手势</a>
+        </div>
+    </div>
+    <!-- 中间主要内容 -->
+    <div id="main_box">
+        <h3>佛之手印——敦煌的极简美学<span>(The handprint of the Buddha, the minimalist aesthetics of Dunhuang)</span> </h3>
+        <div id="Documents_box">
+            <ul>
+                <li>
+                    <div class="jing_img">
+                        <img src="./images/jing7.jpg" alt="">
+                    </div>
+                    <div class="jing_txt">
+                        <p>佛说法手</p>
+                        <p>所属: <span>伯孜克里克石窟第31窟-高昌</span></p>
+                        <p>
+                            敦煌写经是中国古文献中的瑰宝，自1900年敦煌写经卷在敦煌藏经洞被发现后，密藏多年的敦煌文献随即流散，许多完整的写经卷均被国外的探险家所劫掠。直到1910年，清朝学部才将劫余部分运抵北京。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="jing_img">
+                        <img src="./images/jing8.jpg" alt="">
+                    </div>
+                    <div class="jing_txt">
+                        <p>化须弥山手</p>
+                        <p>所属: <span>莫高窟第3窟-元代</span></p>
+                        <p>
+                            敦煌市档案馆所保存的12件唐代古藏文《敦煌写经》中，《般若波罗蜜多经》共有7件，梵夹装，纸张展开后长71厘米，宽20厘米；有部分残缺。《十万般若波罗蜜多经》共有2件，梵夹装，纸张展开后长73厘米。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="jing_img">
+                        <img src="./images/jing9.jpg" alt="">
+                    </div>
+                    <div class="jing_txt">
+                        <p>持莲手</p>
+                        <p>所属: <span>莫高窟第6窟-宋代</span></p>
+                        <p>
+                            药师琉璃光如来是佛教中的一尊佛陀，被认为拥有特殊的医疗和治愈力量，被信仰为医药菩萨。这部经典描述了药师佛的愿望和力量，以及信徒如何通过信仰和忏悔获得庇佑。
+                            敦煌莫高窟保存了大量佛教文献。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="jing_img">
+                        <img src="./images/jing10.jpg" alt="">
+                    </div>
+                    <div class="jing_txt">
+                        <p>持柳枝手</p>
+                        <p>所属: <span>唐代绢画</span></p>
+                        <p>
+                            敦煌莫高窟藏经洞发现的写经，上起魏晋，下至宋元，其中的大部分是唐代的写经卷子。历代抄写经书的人员，大多出自经生、书手和善书的僧人，他们有的受人雇佣，有的自愿抄写。
+                            抄写经书意在文字，以无讹为是。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="jing_img">
+                        <img src="./images/jing11.jpg" alt="">
+                    </div>
+                    <div class="jing_txt">
+                        <p>护鸽手</p>
+                        <p>所属: <span>莫高窟第254窟 北魏</span></p>
+                        <p>
+                            唐代书法崇尚"王体"，在敦煌石室中也曾藏有王羲之的《瞻近帖》、《龙保帖》，智永的《真草千字文残卷》等名作临本，虽数量不多，且有残缺，但为我们提供了一定佐证。
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="jing_img">
+                        <img src="./images/jing12.jpg" alt="">
+                    </div>
+                    <div class="jing_txt">
+                        <p>菩萨手</p>
+                        <p>所属: <span>莫高窟第248窟 北魏</span></p>
+                        <p>
+                            《真草千字文残卷》虽数量不多，且有残缺，但为我们提供了一定佐证。然而，写经书法正是在这样的环境中显现风格，因意在文字，又不似王书飘逸，反有一种严劲刻厉之美。
+                        </p>
+                    </div>
+                </li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+    <!-- 灯箱容器（支持画廊导航） -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-btn">&times;</span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="caption">
+                <p class="gesture-name"></p>
+                <p class="gesture-era"></p>
+            </div>
+            <div class="image-counter"></div>
+        </div>
+        <button class="nav-btn prev-btn">&#10094;</button>
+        <button class="nav-btn next-btn">&#10095;</button>
+    </div>
+    <div class="bottom-button">
+        <a href="#" id="backToTop">快捷跳转</a>
+        <div class="dropdown-menu" id="dropdownMenu">
+            <a href="./index.html">网站首页</a>
+            <a href="./DunhuangStudies.html">敦煌学的由来</a>
+            <a href="./history.html">历史简介</a>
+            <a href="./music.html">乐器主题</a>
+            <a href="./dance.html">舞蹈主题</a>
+            <a href="Scripture.html">敦煌手势</a>
+            <a href="creation.html">寻梦敦煌</a>
+        </div>
+    </div>
+    <footer>
+        <div id="footer">
+            <img class="footer_left" src="./images/footer_left.png" alt="">
+            <img class="footer_right" src="./images/footer_right.png" alt="">
+            <p>
+                版权所有©23人工智能D班第八组
+            </p>
+        </div>
+    </footer>
+    <!-- AI助手 -->
+    <div class="ai-assistant">
+        <button class="ai-assistant-button">
+            <img src="./images/ai-assistant.png" alt="AI助手">
+        </button>
+        <div class="ai-assistant-window">
+            <div class="ai-assistant-header">
+                <h3>敦煌文化AI助手</h3>
+                <img src="./images/ai-assistant.png" alt="AI助手">
+                <button class="ai-assistant-close">&times;</button>
+            </div>
+            <div class="ai-assistant-messages">
+                <div class="message assistant">
+                    您好！我是敦煌文化AI助手，很高兴为您服务。请问有什么可以帮您的吗？
+                </div>
+            </div>
+            <div class="ai-assistant-input">
+                <input type="text" placeholder="请输入您的问题...">
+                <button>发送</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
