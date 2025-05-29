@@ -1,0 +1,544 @@
+/* banner栏目 */
+#banner {
+    position: relative;
+    height: 670px;
+    margin: 0 auto;
+    background: url(../images/bg5.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+}
+
+.little_box {
+    position: relative;
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.banner_text {
+    height: 400px;
+    background-color: rgb(0, 0, 0, 0.6);
+    width: 700px;
+    color: rgb(180 31 4);
+    float: left;
+    padding: 10px;
+    margin-left: 145px;
+    margin-top: 125px;
+    border-radius: 20px;
+}
+.banner_text:hover {
+    background-color: rgba(185, 107, 17, 0.3);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.banner_text p {
+    line-height: 30px;
+    margin-top: 30px;
+    color: #f8d272;
+}
+
+.index_more {
+    width: 126px;
+    height: 40px;
+    padding: 0 285px;
+}
+
+.index_more a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    letter-spacing: 4px;
+    background-color: rgb(98, 21, 7);
+    color: #fff;
+    text-decoration: none;
+    line-height: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.wudao {
+    float: right;
+    width: 190px;
+    margin-right: 260px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+.wudao img {
+    width: 100%;
+}
+.wudao img:nth-child(1){
+    margin: 0 100px;
+}
+.wudao img:nth-child(3){
+    margin: 0 150px;
+}
+/* 壁画精选 */
+#Mural_Special_Topic {
+    height: 680px;
+    position: relative;
+    width: 100%;
+    padding: 50px 0px;
+    background: url(../images/bg9.jpg) ;
+}
+
+.Mural_Special_Topic_box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.h2 {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+}
+
+.h2 h2 {
+    font-size: 40px;
+    color:rgb(98, 21, 7);
+}
+
+.h2 p {
+    color: #fac013;
+    line-height: 30px;
+    margin-top: 10px;
+}
+
+.Mural_Special_list {
+    display: flex;
+    margin-bottom: 40px;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.Mural_Special_list li {
+    display: inline-block;
+    width: 226px;
+    margin: 15px;
+    background-color: #a2c4c0;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.Mural_Special_list li img {
+    width: 100%;
+}
+
+.Mural_Special_list li h3 {
+    text-align: center;
+    font-size: 26px;
+    line-height: 40px;
+    margin: 10px 0px;
+}
+
+.Mural_Special_list_txt {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+    color: #322828;
+    line-height: 26px;
+}
+
+.Mural_Special_list_number {
+    font-size: 14px;
+    color: #322828;
+    margin-top: 10px;
+}
+
+.Mural_Special_list_number span {
+    color: #940101a9;
+}
+.Mural_Special_Topic_box ul li:hover {
+    background-color: rgb(248, 207, 70);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* 响应式调整 */
+@media (max-width: 768px) {
+    #literature_box {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .Co_create_works_box li {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+/* 敦煌手势 */
+#literature {
+    height: auto;
+    min-height: 670px;
+    width: 100%;
+    background: url(../images/bg8.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 20px 0px;
+}
+
+#literature .h2 {
+    color: rgb(98, 21, 7);
+    text-align: center;
+}
+
+#literature_box {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#literature_box .Co_create_works_box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+#literature_box .Co_create_works_box li {
+    width: 200px;
+    background-color: rgba(129, 42, 21, 0.75);
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    list-style: none;
+}
+
+#literature_box .works_box_img {
+    width: 100%;
+    height: 296px;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+#literature_box .Co_create_works_box li:nth-child(1) .works_box_img {
+    background: url(../images/jing8.jpg) round;
+}
+
+#literature_box .Co_create_works_box li:nth-child(2) .works_box_img {
+    background: url(../images/jing9.jpg) round;
+}
+
+#literature_box .Co_create_works_box li:nth-child(3) .works_box_img {
+    background: url(../images/jing10.jpg) round;
+}
+
+#literature_box .Co_create_works_box li:nth-child(4) .works_box_img {
+    background: url(../images/jing11.jpg) round;
+}
+
+#literature_box .Co_create_works_box h3 {
+    font-size: 22px;
+    color: rgb(53, 11, 4);
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#literature_box .works_box_txt {
+    font-size: 16px;
+    color: #f8d272;
+    line-height: 1.6;
+    text-align: justify;
+    height: 96px;
+    display: -webkit-box;
+}
+
+/* 寻梦敦煌 */
+#Co_create_works {
+    width: 100%;
+    padding: 10px 0px;
+    background: url(../images/2.jpg) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Co_create_works_box {
+    height: 660px;
+    display: flex;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.Co_create_works_box li {
+    width: 296px;
+    display: inline-block;
+    margin: 30px 30px;
+    background-color: #812a15be;
+    border-radius: 20px;
+    padding: 20px 20px;
+}
+
+.works_box_img {
+    width: 100%;
+    height: 296px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+
+.Co_create_works_box li:nth-child(1) .works_box_img {
+    background: url(../images/create1.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Co_create_works_box li:nth-child(2) .works_box_img {
+    background: url(../images/create2.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Co_create_works_box li:nth-child(3) .works_box_img {
+    background: url(../images/create3.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Co_create_works_box li:nth-child(4) .works_box_img {
+    background: url(../images/create4.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.Co_create_works_box h3 {
+    font-size: 26px;
+    line-height: 40px;
+    margin: 10px 40px;
+    color: rgb(98, 21, 7);
+}
+
+.Co_create_works_box li {
+    cursor: pointer;
+}
+
+.works_box_txt {
+    height: 78px;
+    display: -webkit-box;
+    font-size: 15px;
+    color: #f8d272;
+    line-height: 26px;
+}
+
+.Co_create_works_box li:hover {
+    background-color: rgba(118, 117, 108, 0.541);
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 首页动画 */
+.animate-banner {
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.animate-text {
+    transform: translateY(30px);
+    opacity: 0;
+    animation: slideUp 1s ease-out 0.3s forwards;
+}
+
+.animate-image {
+    transform: translateX(30px);
+    opacity: 0;
+    animation: slideLeft 1s ease-out 0.6s forwards;
+}
+
+.animate-button {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out 1s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(30px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(30px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+/*壁画精选*//* 3D旋转动画 */
+@keyframes rotateY360 {
+    from { transform: rotateY(0deg); }
+    to { transform: rotateY(360deg); }
+}
+
+/* 3D旋转类 */
+.rotate-y-3d {
+    animation: rotateY360 3s linear forwards;
+    transform-style: preserve-3d; /* 确保3D效果生效 */
+}
+
+/* 可选：为父容器添加透视效果，增强3D感 */
+.Mural_Special_list li {
+    perspective: 1000px; /* 透视值越大，3D效果越平缓 */
+}
+
+/* 敦煌手势 */
+/* 敦煌手势点击放大提示样式 */
+#literature_box .Co_create_works_box li {
+    position: relative;
+}
+
+.gesture-hint {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f8d272;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-color: rgba(98, 21, 7, 0.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    pointer-events: none; /* 防止提示文本干扰点击 */
+    white-space: nowrap;
+}
+
+#literature_box .Co_create_works_box li:hover .gesture-hint {
+    opacity: 1;
+}
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+
+/* 放大显示的图片 */
+.modal-image {
+    max-width: 80%;
+    max-height: 80%;
+    transform: scale(0.5);
+    transition: transform 0.3s;
+    border: 10px solid #fac013;
+    box-shadow: 0 0 20px rgba(250, 192, 19, 0.6);
+}
+
+/* 显示动画 */
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.modal-overlay.active .modal-image {
+    transform: scale(1);
+}
+
+/* 页面过渡动画 */
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #bd3a02, #fac013);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    pointer-events: none;
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+/* 寻梦敦煌了解更多链接样式 */
+.Co_create_works_box li {
+    position: relative;
+}
+
+.learn-more-link {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f8d272;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 1s ease;
+    background-color: rgba(98, 21, 7, 0.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.Co_create_works_box li:hover .learn-more-link {
+    opacity: 1;
+}
+
+/* 页面加载动画 */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+    animation: bounce 1s infinite;
+}
+
+.loader-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #bd3a02;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    animation: spin 1s linear infinite;
+}
+
+.loader-content p {
+    color: #bd3a02;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,346 @@
+/* 敦煌手势 */
+#Documents_box {
+    width: 100%;
+}
+
+#Documents_box ul li {
+    float: left;
+    width: 48%;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 30px;
+    overflow: hidden;
+    height: 230px;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+#Documents_box ul li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(152, 56, 24, 0.15);
+    background-color: #f8f3ed;
+}
+
+#Documents_box ul li:hover .jing_img {
+    transform: scale(1.03);
+}
+
+#Documents_box ul li:hover .jing_txt p:nth-child(1) {
+    color: #9c3925;
+}
+
+#Documents_box ul li:hover .jing_txt p:nth-child(3) {
+    opacity: 1;
+}
+
+#Documents_box ul li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #bd3a02, #fac013);
+    animation: borderGrow 0.4s forwards;
+}
+
+@keyframes borderGrow {
+    from { width: 0; opacity: 0; }
+    to { width: 100%; opacity: 1; }
+}
+
+#Documents_box ul li:nth-child(2n) {
+    margin-left: 4%;
+}
+
+.jing_img {
+    float: left;
+    height: 200px;
+    text-align: center;
+    width: 262px;
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    margin-right: 20px;
+    overflow: hidden;
+    transition: transform 1.4s ease;
+}
+
+.jing_img img {
+    height: 100%;
+    transition: transform 1.4s ease;
+}
+
+.jing_txt p:nth-child(1) {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.jing_txt p:nth-child(2) {
+    font-size: 12px;
+    line-height: 30px;
+}
+
+.jing_txt p:nth-child(2) span {
+    color: #9c3925;
+}
+
+.jing_txt p:nth-child(3) {
+    color: #483C34;
+    line-height: 26px;
+    font-size: 14px;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+/* 手势筛选样式 */
+.gesture-filter {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 14px;
+    min-width: 80px;
+}
+
+.filter-btn:hover {
+    background-color: #ffeb3b;
+}
+
+.filter-btn.active {
+    background: linear-gradient(to right, #bd3a02, #fac013);
+    color: white;
+    border-color: #bd3a02;
+    font-weight: bold;
+}
+
+.result-counter {
+    margin-left: 15px;
+    font-size: 14px;
+    color: #666;
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .gesture-filter {
+        gap: 8px;
+    }
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 13px;
+        min-width: 70px;
+    }
+}
+
+/* 轮播图样式 */
+.carousel-container {
+    position: relative;
+    width: auto;
+    height: 300px;
+    margin: 0 auto 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background: #fff;
+}
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+.carousel-slide img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.2s;
+}
+.carousel-btn:hover {
+    background: rgba(0,0,0,0.6);
+}
+.carousel-btn.prev-btn {
+    left: 10px;
+}
+.carousel-btn.next-btn {
+    right: 10px;
+}
+.carousel-container .banner2 {
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+}
+.carousel-container .banner2 h3 {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-weight: bold;
+}
+.carousel-container .banner2 p {
+    color: #ffeb33;
+    font-size: 22px;
+    margin: 8px 0 0 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+/* 灯箱基础样式 */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 9999;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 导航按钮 */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    padding: 0 20px;
+    opacity: 0.7;
+    transition: all 0.3s;
+    user-select: none;
+    background: none;
+    border: none;
+    z-index: 10000;
+}
+
+.nav-btn:hover {
+    opacity: 1;
+    transform: translateY(-50%) scale(1.2);
+}
+
+.prev-btn { 
+    left: 5%; 
+}
+
+.next-btn { 
+    right: 5%; 
+}
+
+/* 灯箱内容样式 */
+.lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 80vh;
+    margin: 10vh auto;
+    text-align: center;
+    z-index: 9999;
+}
+
+#lightbox-img {
+    max-height: 70vh;
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.9); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* 关闭按钮 */
+.close-btn {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    color: white;
+    font-size: 3rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.close-btn:hover {
+    transform: rotate(90deg) scale(1.2);
+}
+
+/* 文字描述 */
+.caption {
+    color: white;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.gesture-name {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* 图片计数器 */
+.image-counter {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ccc;
+    font-size: 1rem;
+}
+
+/* 手势图片悬停提示 */
+.jing_img img {
+    cursor: zoom-in;
+    transition: transform 0.3s;
+}
+
+.jing_img img:hover {
+    transform: scale(1.03);
+}

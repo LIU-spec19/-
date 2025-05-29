@@ -1,0 +1,620 @@
+/* 清楚默认格式 */
+* {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+/* 清除浮动 */
+.clear {
+    clear: both;
+}
+
+/* 头部导航栏 */
+header {
+    height: 70px;
+    position: relative;
+    z-index: 100;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 248, 220, 0.95) 100%);
+}
+
+.heard {
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.heard_left {
+    float: left;
+    height: 70px;
+}
+
+.logo {
+    float: left;
+    width: 140px;
+    margin-right: 30px;
+}
+
+.logo img {
+    width: 100%;
+    height: 70px;
+}
+
+.heard_right {
+    float: right;
+    line-height: 70px;
+}
+
+.heard_right a {
+    font-weight: bolder;
+    color: black;
+    text-decoration: none;
+}
+
+.heard_right a:hover {
+    text-decoration: underline;
+    color: #FF3030;
+}
+
+.heard_right input {
+    width: 160px;
+    height: 40px;
+    background: #F5F5F5;
+    border: 0px;
+    border-radius: 20px;
+    padding: 0px 10px;
+    margin-right: 30px;
+}
+
+.heard_right input::placeholder {
+    color: #999E9C;
+}
+
+nav {
+    float: left;
+    height: 100%;
+}
+
+.rop-down-menu {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul>li {
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    margin-right: 30px;
+}
+
+nav ul>li>a {
+    text-decoration: none;
+    color: #9d1b01;
+    font-weight: bolder;
+}
+
+/* 添加当前页面导航标签样式 */
+nav ul>li>a.active {
+    color: #8B4513;
+}
+
+nav ul>li>a:hover {
+    color: #fac013;
+    text-decoration: underline;
+}
+
+.drop-down-menu {
+    position: relative;
+    width: 64px;
+    z-index: 1000;
+}
+
+.drop-down-menu>a {
+    color: #9d1b01;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.drop-down-menu:hover>a {
+    color: #ffaf19;
+    text-decoration: underline;
+}
+
+.drop-box {
+    position: absolute;
+    display: none;
+    z-index: 1001;
+}
+
+.rop-down-menu-box:hover .drop-box {
+    display: block;
+    border-top: 4px solid #ffaf19;
+    position: relative;
+    top: -10px;
+    background-color: #fff;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    width: 200px;
+    line-height: 30px;
+}
+
+.drop-box a {
+    display: block;
+    color: #ffcc00;
+    text-decoration: none;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.drop-box a:hover {
+    color: #500404;
+    text-decoration: underline;
+}
+
+/* 底部版权信息 */
+footer {
+    position: relative;
+    background: #8B4513;
+    padding: 47px 0px;
+}
+
+#footer {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    color: #878787;
+    font-size: 14px;
+}
+
+.footer_left {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100px;
+}
+
+.footer_right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100px;
+}
+
+/* 第二导航栏 */
+#nav2 {
+    width: 100%;
+    line-height: 45px;
+    background: linear-gradient(135deg, rgb(255 248 220 / 95%) 0%, rgba(255, 255, 255, 0.95)100%);
+}
+
+.nav2_box {
+    width: 1200px;
+    margin: 0 auto;
+    color: #ffcd43;
+}
+
+.nav2_box a {
+    color: #ffcd43;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* 通用内容框样式 */
+#main_box {
+    width: 1100px;
+    margin: 25px auto;
+}
+
+#main_box h3 {
+    font-size: 30px;
+    border-bottom: 1px solid #EEEEEE;
+    padding: 10px 0px;
+}
+
+#main_box h3 span {
+    color: rgb(98, 21, 7);
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.main_txt {
+    padding: 20px;
+}
+
+.main_txt p {
+    left: -4px;
+    position: relative;
+    text-indent: 2rem;
+    line-height: 2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    #literature_box {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .Co_create_works_box li {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+.bottom-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+}
+
+#backToTop {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #555;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #5d050581;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.dropdown-menu a {
+    text-align: center;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #ffc505;
+}
+
+/* 导航注明当前位置*/
+/* nav ul li.active {
+    background-color: rgba(150, 117, 33, 0.507); 
+    border-radius: 45%;
+} */
+
+/* 在文档2.css中添加 */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: transparent;
+    z-index: 1000;
+}
+
+.reading-progress-bar {
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, #fac013, #bd3a02);
+    transition: width 0.1s ease;
+}
+
+/* 用户状态样式 */
+.user-auth {
+    float: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#logoutLink {
+    color: #070502;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#welcomeMessage {
+    background-color: rgba(209, 160, 90, 0.1);
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+
+/* 图片预览功能 */
+.image-preview {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.image-preview img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+.image-preview .close-preview {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 10px;
+}
+
+.image-preview .prev-image,
+.image-preview .next-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.image-preview .prev-image {
+    left: 20px;
+}
+
+.image-preview .next-image {
+    right: 20px;
+}
+
+/* 图片悬停效果 */
+.previewable-image {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.previewable-image:hover {
+    transform: scale(1.05);
+}
+
+/* 返回顶部按钮 */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 100px;
+    width: 40px;
+    height: 40px;
+    background: #ae0715fd;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 页面加载动画 */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader-content {
+    text-align: center;
+}
+
+.loader-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #ae0715fd;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 移动端优化 */
+@media screen and (max-width: 768px) {
+    .image-preview .prev-image,
+    .image-preview .next-image {
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .back-to-top {
+        right: 15px;
+        bottom: 80px;
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+/*夜间模式*/
+body.dark-mode #main_box {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+/* 夜间模式样式 */
+body.dark-mode {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode::before {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode header,
+body.dark-mode #nav2,
+body.dark-mode footer {
+    background: linear-gradient(to right, #282838, #7b7b98);
+}
+
+body.dark-mode #main_box {
+    background-color: rgba(0, 0, 0, 0.2); /* 添加这一行 */
+    color: #1a1919;
+}
+
+/* 其他夜间模式样式 */
+body.dark-mode #main_box h3,
+body.dark-mode #main_box h3 span,
+body.dark-mode .main_txt p {
+    color: #ffffff;
+}
+
+body.dark-mode .heard_right a {
+    color:#363636;
+}
+
+body.dark-mode .heard_right input {
+    background: #2c2c54;
+    color: #ffffff;
+}
+
+body.dark-mode .heard_right input::placeholder {
+    color: #ffffff;
+}
+
+body.dark-mode nav ul>li>a,
+body.dark-mode .drop-down-menu>a {
+    color: #ffaf19;
+}
+
+body.dark-mode .rop-down-menu-box:hover .drop-box {
+    background-color: #2c2c54;
+}
+
+body.dark-mode .drop-box a {
+    color: #ffcc00;
+}
+
+body.dark-mode .drop-box a:hover {
+    color: #ffaf19;
+}
+
+body.dark-mode .nav2_box a {
+    color: #ffffff;
+}
+
+body.dark-mode .reading-progress-bar {
+    background: linear-gradient(to right, #9494d4, #2c2c54);
+}
+
+body.dark-mode .carousel-container {
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .carousel-slide img {
+    filter: brightness(0.7);
+}
+
+body.dark-mode .lang-btn {
+    background-color: #2c2c54;
+    color: #ffffff;
+}
+
+body.dark-mode .lang-btn.active {
+    background-color: #40407a;
+}
+
+body.dark-mode .dropdown-menu {
+    background-color: #2c2c54;
+}
+
+body.dark-mode .dropdown-menu a {
+    color: #ffffff;
+}
+
+body.dark-mode .dropdown-menu a:hover {
+    background-color: #40407a;
+}
+
+body.dark-mode #backToTop {
+    background-color: #2c2c54;
+    color: #ffffff;
+}
+
+body.dark-mode #backToTop:hover {
+    background-color: #40407a;
+}
+
+/* 夜间模式切换按钮 */
+.dark-mode-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.dark-mode-toggle i {
+    font-size: 18px;
+}
+
+body.dark-mode .dark-mode-toggle {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+body.dark-mode .dark-mode-toggle:hover {
+    background-color: black;
+}

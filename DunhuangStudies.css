@@ -1,0 +1,511 @@
+/* 敦煌学文化页面图片轮播 */
+.carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 400px;
+}
+
+.carousel-slide img {
+    min-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.3s;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 15px;
+}
+
+.next-btn {
+    right: 15px;
+}
+
+/* 移除原.wenhua的浮动样式 */
+.wenhua {
+    display: none;
+}
+
+/* 敦煌学的由来banner */
+.page-DunhuangStudies .banner2 {
+    background-image: url(../images/banner-two.png);
+}
+/* 语言切换器样式 */
+.language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 120px;
+    display: flex;
+    gap: 5px;
+    z-index: 100;
+}
+/* 语言切换动画 */
+body.language-changing [data-translate-id] {
+    transition: opacity 0.3s ease;
+    opacity: 0.5;
+}
+
+[data-translate-id] {
+    transition: opacity 0.3s ease;
+}
+
+/* 语言标签样式 */
+.lang-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.lang-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(209, 160, 90, 0.2);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.lang-btn.active::after {
+    transform: translateX(0);
+}
+/* 轮播图样式 */
+.carousel-container2 {
+    position: relative;
+    width: auto;
+    height: 300px;
+    margin: 0 auto 0 auto;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    background: #fff;
+}
+.carousel-slide2 {
+    display: flex;
+    transition: transform 0.5s ease;
+    height: 100%;
+}
+.carousel-slide2 img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.carousel-btn2 {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.3);
+    color: #fff;
+    border: none;
+    font-size: 2rem;
+    padding: 0 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+    transition: background 0.2s;
+}
+.carousel-btn2:hover {
+    background: rgba(0,0,0,0.6);
+}
+.carousel-btn2.prev-btn2 {
+    left: 10px;
+}
+.carousel-btn2.next-btn2 {
+    right: 10px;
+}
+.carousel-container2 .banner2 {
+    position: absolute;
+    width: fit-content;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    background: none;
+}
+.carousel-container2 .banner2 h3 {
+    color: #ffffff;
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    font-weight: bold;
+}
+.carousel-container2 .banner2 p {
+    color: #ffeb33;
+    font-size: 22px;
+    margin: 8px 0 0 0;
+    padding: 0;
+    line-height: 1.2;
+}
+
+/* 点赞和评论区域样式 */
+.interaction-area {
+    margin-top: 30px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.like-section {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.like-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.like-btn i {
+    color: #999;
+    transition: all 0.3s ease;
+}
+
+.like-btn.liked i {
+    color: #ff4757;
+    transform: scale(1.2);
+}
+
+.like-btn .like-count {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #666;
+}
+
+.comment-section {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.comments-list {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.comment-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: commentAppear 0.5s ease-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.comment-item::before {
+    content: '🎨';
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    font-size: 40px;
+    opacity: 0.1;
+    transform: rotate(-15deg);
+}
+
+.comment-item::after {
+    content: '✨';
+    position: absolute;
+    left: -20px;
+    bottom: -20px;
+    font-size: 30px;
+    opacity: 0.1;
+    transform: rotate(15deg);
+}
+
+.comment-user {
+    font-weight: bold;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.comment-user .trophy-icon {
+    color: gold;
+    margin-left: 5px;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.comment-content {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.comment-time {
+    color: #999;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.comment-input {
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.quick-comment-btn {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+    padding: 5px;
+}
+
+.quick-comment-btn:hover {
+    color: #ff4757;
+}
+
+.comment-input input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.send-comment-btn {
+    padding: 8px 16px;
+    background: #ff4757;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.send-comment-btn:hover {
+    background: #ff6b81;
+}
+
+/* 点赞动画 */
+@keyframes heartBeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.like-btn.animate i {
+    animation: heartBeat 0.3s ease-in-out;
+}
+
+/* 提示信息样式 */
+.toast-message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-100%);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.toast-message.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* 表情选择器样式 */
+.emoji-picker {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: none;
+    z-index: 1000;
+    margin-bottom: 10px;
+}
+
+.emoji-picker.show {
+    display: block;
+}
+
+.emoji-list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 8px;
+    max-width: 300px;
+}
+
+.emoji {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+    text-align: center;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.emoji:hover {
+    background-color: #f0f0f0;
+}
+
+/* 添加小三角形指示器 */
+.emoji-picker::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid white;
+}
+
+/* 评论特效动画 */
+@keyframes commentAppear {
+    0% {
+        transform: translateY(20px) scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes flyingRibbon {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 点赞特效 */
+@keyframes likeEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.like-btn.liked i {
+    animation: likeEffect 0.5s ease-out;
+}
+
+/* 评论互动按钮 */
+.comment-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.comment-action-btn {
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 2px 8px;
+    border-radius: 12px;
+    transition: all 0.3s;
+}
+
+.comment-action-btn:hover {
+    background: #f0f0f0;
+    color: #ff4757;
+}
+
+.comment-action-btn.active {
+    color: #ff4757;
+}
+
+/* 评论回复样式 */
+.comment-replies {
+    margin-left: 20px;
+    padding-left: 10px;
+    border-left: 2px solid #eee;
+}
+
+.reply-item {
+    font-size: 13px;
+    color: #666;
+    margin-top: 5px;
+    padding: 5px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+/* 评论统计 */
+.comment-stats {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    color: #666;
+    font-size: 14px;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.stat-item i {
+    color: #ff4757;
+}

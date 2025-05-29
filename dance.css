@@ -1,0 +1,238 @@
+#illustrate {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+#illustrate h3{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.3s forwards;
+}
+
+#illustrate p{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out 0.6s forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.illustrate_box {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+    top: 30px;
+}
+
+.illustrate_box p {
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 40px;
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.illustrate_box h3 {
+    color:rgb(250, 193, 6);
+    font-size: 50px;
+    line-height: 100px;
+    position: relative;
+}
+
+#illustrate img {
+    height: 360px;
+    width: 100%;
+    animation: zoom 5s infinite;
+}
+
+.main_box2 ul {
+    width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.main_box2 ul li {
+    width: 266px;
+    display: inline-block;
+    padding: 15px 15px;
+    margin: 0px 40px;
+    margin-bottom: 30px;
+    background-color: antiquewhite;
+}
+
+.main_box2 ul li {
+    cursor: pointer;
+}
+
+.main_box2 ul li p {
+    text-align: center;
+}
+
+.main_box2 ul li p:nth-child(2) {
+    font-size: 20px;
+    margin: 10px 0px;
+}
+
+.main_box2 ul li p:nth-child(3) {
+    font-size: 16px;
+    color: #b83107;
+    margin-bottom: 10px;
+}
+
+.main_box2 ul li p:nth-child(4) {
+    color:#9e7400;
+}
+.main_box2 ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* 响应式调整 */
+@media (max-width: 768px) {
+    #literature_box {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .Co_create_works_box li {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+.main_box2 ul li:hover::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #bd3a02, #fac013);
+    animation: borderGrow 0.4s forwards;
+}
+
+@keyframes borderGrow {
+    from { width: 0; opacity: 0; }
+    to { width: 100%; opacity: 1; }
+}
+
+.list_img {
+    position: relative;
+    width: 100%;
+}
+
+.list_img img {
+    width: 100%;
+    height: 180px;
+}
+
+.list_img span {
+    position: absolute;
+    top: 160px;
+    left: 0px;
+    background-color: #6d392f;
+    color: #fbff72;
+    padding: 5px 115px;
+    font-size: 14px;
+    letter-spacing: 4px
+}
+/* 强制按钮显示在最前 */
+.random-explore-btn {
+    position: fixed;
+    bottom: 200px;
+    left: 20px;
+    padding: 10px 15px;
+    background: linear-gradient(135deg, #bd3a02, #fac013);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    z-index: 9999 !important; /* 关键设置 */
+    cursor: pointer;
+  }
+  
+  /* 高亮动画 */
+  .highlight-item {
+    animation: highlight 3s ease;
+  }
+  
+  @keyframes highlight {
+    0% { box-shadow: 0 0 0 0 rgba(182, 3, 0, 0.483); }
+    50% { box-shadow: 0 0 0 10px rgba(118, 18, 3, 0.373); }
+    100% { box-shadow: 0 0 0 0 rgba(250, 193, 6, 0); }
+  }
+  /* 轮播图样式 */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.slider-controls button {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+    color: #b83107;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 10px;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background: #b83107;
+}
+
